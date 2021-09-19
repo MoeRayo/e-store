@@ -1,0 +1,5 @@
+<template>
+    <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt eius id eum, delectus et natus rerum consequuntur porro vitae earum debitis. Blanditiis eaque quibusdam deleniti velit dolore rem amet quia ullam exercitationem labore quis voluptatum ea, voluptatem sint! Dolor, voluptatum doloribus officia repellendus molestias voluptates vero exercitationem recusandae assumenda omnis cumque voluptatibus, nesciunt quae nisi nemo reprehenderit aut in beatae facilis modi nobis. Saepe voluptatem quis facilis omnis. Quod doloribus autem quidem, rem maxime officiis totam nisi voluptas mollitia consectetur aspernatur consequatur! Culpa, facere? Odit sequi iusto possimus vel, expedita perferendis quam vero veritatis dolor aliquid exercitationem officiis, natus nulla.
+    </div>
+</template>
