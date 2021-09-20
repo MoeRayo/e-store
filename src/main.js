@@ -4,12 +4,28 @@ import 'tachyons/css/tachyons.css'
 import router from './router'
 import Cloudinary from "cloudinary-vue";
 import store from '@/store/index'
+import { domain, clientId } from "../auth_config.json";
+
+// Import the plugin here
+import { Auth0Plugin } from "./auth";
 
 
 Vue.use(Cloudinary, {
   configuration: { 
     cloudName: "moerayo",
     secure: true }
+});
+
+Vue.use(Auth0Plugin, {
+  domain,
+  clientId,
+  onRedirectCallback: appState => {
+    router.push(
+      appState && appState.targetUrl
+        ? appState.targetUrl
+        : window.location.pathname
+    );
+  }
 });
 
 

@@ -1,11 +1,15 @@
 <template>
   <div id="app">
-    <navigation></navigation>
+      <navigation></navigation>
+
+
+      <!-- NEW - add a route to the profile page -->
+      <!-- <router-link v-if="$auth.isAuthenticated" to="/profile">Profile</router-link> -->
     <router-view />
   </div>
 </template>
 
-<script>
+ <script>
   import navigation from "@/components/nav.vue";
 
 export default {
@@ -14,8 +18,27 @@ export default {
     navigation
   }
 }
+
 </script>
-
 <style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
 
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
 </style>
