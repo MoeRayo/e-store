@@ -2,6 +2,7 @@
     <div>
         <carousel></carousel>
         <prod></prod>
+        <product></product>
         {{title}}
 
 
@@ -14,6 +15,8 @@
 <script>
 import carousel from '@/components/carousel.vue';
 import prod from '@/components/prod.vue';
+import product from '@/components/productscards.vue';
+
 
 
 export default {
@@ -24,7 +27,8 @@ export default {
     },
     components: {
         carousel,
-        prod
+        prod,
+        product
     }
 }
 </script>

@@ -2,19 +2,19 @@
   <div>
     <div class="slideshow-container">
       <div class="mySlides fade">
-        <img src="@/assets/carousel8.jpg" style="width:100%">''
+        <img src="https://res.cloudinary.com/moerayo/image/upload/v1632083318/e-store/carousel8_fstjay.jpg" style="width:100%">''
       </div>
       <div class="mySlides fade">
-        <img src="@/assets/carousel3.jpg" style="width:100%">
+        <img src="https://res.cloudinary.com/moerayo/image/upload/v1632083321/e-store/carousel3_vke2hj.jpg" style="width:100%">
       </div>
       <div class="mySlides fade">
-        <img src="@/assets/carousel4.jpg" style="width:100%">
+        <img src="https://res.cloudinary.com/moerayo/image/upload/v1632083322/e-store/crousel4_cnv8uf.jpg" style="width:100%">
       </div>
        <div class="mySlides fade">
-        <img src="@/assets/carousel5.jpg" style="width:100%">
+        <img src="https://res.cloudinary.com/moerayo/image/upload/v1632083319/e-store/carousel5_oaiwht.jpg" style="width:100%">
       </div>
       <div class="mySlides fade">
-        <img src="@/assets/carousel7.jpg" style="width:100%">
+        <img src="https://res.cloudinary.com/moerayo/image/upload/v1632083322/e-store/carousel7_xjxy2y.jpg" style="width:100%">
       </div>
     </div>
     <br>
