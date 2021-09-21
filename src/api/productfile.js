@@ -5,7 +5,7 @@ const _products = [
         description: "This sweater is a custom made McPherson sweater by Ore.",
         size: 'M, XL, XXL',
         color: 'Custom made to what you want',
-        price: '120',
+        price: '15000',
         public_id:"e-store/store4_rlkr3u",
         quantityInStock: 20,
 
@@ -16,7 +16,7 @@ const _products = [
         description: 'Casual Unisex T-shirt',
         size: 'S, M, L',
         color: 'White',
-        price: '10',
+        price: '4000',
         public_id:"e-store/store2_iuj9gd",
         quantityInStock: 13,
 
@@ -27,7 +27,7 @@ const _products = [
         description: 'Casual Unisex T-shirt',
         size: 'S, M, L',
         color: 'Green',
-        price: '15',
+        price: '3500',
         public_id:"e-store/store3_ph4qw4",
         quantityInStock: 50,
 
@@ -38,7 +38,7 @@ const _products = [
         description: 'Custom made shoes with great leather',
         size: '39 - 43',
         color: 'Brown, Black',
-        price: '300',
+        price: '19500',
         public_id: "e-store/store7_rkjrdo",
         quantityInStock: 3,
 
@@ -49,7 +49,7 @@ const _products = [
         description: 'Adire t-shirt',
         size: 'S, M, L',
         color: 'As seen in the picture',
-        price: '180',
+        price: '5000',
         public_id:"e-store/store11_td1at8",
         quantityInStock: 20,
 
@@ -60,7 +60,7 @@ const _products = [
         description: 'Very comfortable and longlasting',
         size: '37 - 40',
         color: 'Yellow, Black',
-        price: '250',
+        price: '10500',
         public_id: "e-store/store5_sht2jx",
         quantityInStock: 10,
 
@@ -71,7 +71,7 @@ const _products = [
         description: '',
         size: '',
         color: 'As seen in the picture',
-        price: '32',
+        price: '6000',
         public_id:"e-store/store22_cww7ir",
         quantityInStock: 80,
 
@@ -82,20 +82,9 @@ const _products = [
         description: 'Very comfortable and longlasting',
         size: '37 - 40',
         color: 'Yellow, Black',
-        price: '280',
+        price: '9000',
         public_id: 'e-store/store9_zfk83z',
         quantityInStock: 32,
-
-    },
-    {
-        id: 9,
-        name: 'Breatheable running seakers Shoes',
-        description: 'perfect for exercise and quick casual outing',
-        size: '37 - 43',
-        color: 'As seen in the picture',
-        price: '70',
-        public_id: "e-store/store9_zfk83z",
-        quantityInStock: 5,
 
     },
     {
@@ -104,7 +93,7 @@ const _products = [
         description: 'Fashionable and chic',
         size: '10 - 12 UK',
         color: 'White',
-        price: '260',
+        price: '15000',
         public_id: "e-store/store8_zzqcom",
         quantityInStock: 3,
 
@@ -115,7 +104,7 @@ const _products = [
         description: 'Perfect for every occasion',
         size: '',
         color: 'Brown',
-        price: '20',
+        price: '9500',
         public_id: "e-store/store20_ui9b7a",
         quantityInStock: 15,
 
@@ -123,7 +112,7 @@ const _products = [
     {
         id: 11,
         name: 'Colorful sneakers',
-        price: '200',
+        price: '11000',
         description: 'Fashion',
         size: '36 - 42',
         color: 'As seen in the picture',
@@ -137,7 +126,7 @@ const _products = [
         description: 'Perfect for jogging and relaxing.',
         size: 'S, M, L',
         color: 'Black, White, Red, Blue',
-        price: '8',
+        price: '2000',
         public_id:"e-store/store14_rrxsc6",
         quantityInStock: 43,
 
@@ -148,7 +137,7 @@ const _products = [
         description: 'Soft on the skin, comfortable, longlasting and does not fade ',
         size: 'S, M, L',
         color: 'As seen in the picture',
-        price: '45',
+        price: '6500',
         public_id: "e-store/store12_xle1ms",
         quantityInStock: 21,
 
@@ -159,7 +148,7 @@ const _products = [
         description: 'Patterened fashionable beach shirt',
         size: 'S, M, L',
         color: 'As seen in the picture',
-        price: '50',
+        price: '8000',
         public_id:"e-store/store13_spy0sm",
         quantityInStock: 44,
 
@@ -170,20 +159,9 @@ const _products = [
         description: 'Fashionable and can be styled with anything',
         size: 'S, M',
         color: 'Gold, Black',
-        price: '30',
+        price: '6500',
         public_id: "e-store/store16_l6imqy",
         quantityInStock: 65,
-
-    },
-    {
-        id: 17,
-        name: 'Women baggy jean',
-        description: 'Join the new rave of stylish women with this new baggy',
-        size: 'S, M, L',
-        color: 'Blue, Black, White',
-        price: '23',
-        public_id:"e-store/store16_l6imqy",
-        quantityInStock: 8,
 
     },
     {
@@ -192,7 +170,7 @@ const _products = [
         description: '',
         size: '',
         color: 'Green, Brown, Black, White, Lavendar',
-        price: '15',
+        price: '3000',
         public_id:"e-store/store21_nz4gfa",
         quantityInStock: 102,
 
@@ -203,7 +181,7 @@ const _products = [
         description: 'Custom made bag from Miami based designer',
         size: '',
         color: 'Orange',
-        price: '45',
+        price: '5300',
         public_id: "e-store/store19_rezbmn",
         quantityInStock: 1,
 
@@ -215,7 +193,7 @@ const _products = [
         description: 'Perfect for every occasion',
         size: '41 - 44',
         color: 'Brown',
-        price: '120',
+        price: '12000',
         public_id: "e-store/store6_rt2ywb",
         quantityInStock: 2,
 

@@ -1,21 +1,22 @@
 <template>
   <div id="app">
-      <navigation></navigation>
-
-
-      <!-- NEW - add a route to the profile page -->
-      <!-- <router-link v-if="$auth.isAuthenticated" to="/profile">Profile</router-link> -->
+    <navigation></navigation>
     <router-view />
+    <footing></footing>
+
   </div>
 </template>
 
  <script>
   import navigation from "@/components/nav.vue";
+  import footing from "@/components/footer.vue";
+
 
 export default {
   name: 'App',
   components: {
-    navigation
+    navigation,
+    footing
   }
 }
 
@@ -53,3 +54,4 @@ input[type="number"] {
   color: #42b983;
 }
 </style>
+

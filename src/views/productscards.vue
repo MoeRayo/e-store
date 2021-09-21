@@ -9,7 +9,7 @@
               <h3 class="f6 mv0">{{product.name}}</h3>
             </div>
             <div class="">
-              <p class="f5 mv1">${{product.price}}</p>
+              <p class="f5 mv1">₦{{product.price}}</p>
             </div>
           </div>
           <div>
