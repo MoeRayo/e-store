@@ -13,6 +13,17 @@ const routes = [
     component: Home
   },
   {
+    path: '/products',
+    name: 'product',
+    component: () => import('../views/productscards.vue')
+
+  },
+  {
+    path: '/cart',
+    name: 'checkout',
+    component: () => import('../views/cart.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting

@@ -8,8 +8,12 @@
       <h2 class="mt2 mb0 f6 fw4 ttc tracked i">Your satisfaction is our utmost pleasure...</h2>
       <nav class="bt bb tc mw7 center mt4 flex justify-between flex-wrap">
         <a class="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pv3 ph2 ph4-l" href="/">Home</a>
-        <a class="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pv3 ph2 ph4-l" v-if="$auth.isAuthenticated" href="/contact">Products</a>
-        <a class="f6 f5-l link bg-animate black-80 hover-bg-washed-red dib pv3 ph2 ph4-l" v-if="$auth.isAuthenticated" href="/portfolio">Cart</a>
+        <a class="f6 f5-l link bg-animate black-80 hover-bg-washed-red dib pv3 ph2 ph4-l" v-if="$auth.isAuthenticated" href="">
+          <router-link class="link black" to="/products">Products</router-link>
+        </a>
+        <a class="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pv3 ph2 ph4-l" v-if="$auth.isAuthenticated">
+          <router-link class="link black relative" to="/cart">Cart <span class="bg-light-purple white br-100 absolute cart-position">{{cartNumber}}</span> </router-link>
+        </a>
         <a class="f6 f5-l link bg-animate black-80 hover-bg-light-pink dib pv3 ph2 ph4-l pointer" v-if="!$auth.isAuthenticated && !$auth.loading">
           <span id="qsLoginBtn" @click.prevent="login"><i class="fas fa-sign-in-alt mr2"></i>Login</span>
         </a>
@@ -26,6 +30,11 @@
 <script>
 export default {
   name: 'navigation',
+  computed: {
+    cartNumber(){
+        return this.$store.getters.cartIteming
+      }
+  },
     methods: {
   login() {
     this.$auth.loginWithRedirect();
@@ -37,3 +46,10 @@ export default {
     }
 }
 </script>
+<style>
+.cart-position{
+  bottom: 8px;
+  left: 32px;
+  padding: 2px;
+}
+</style>
