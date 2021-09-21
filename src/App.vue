@@ -28,6 +28,17 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+/* chrome: removes the number type inner anchor  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox: removes the number type inner anchor */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 
 #nav {
   padding: 30px;

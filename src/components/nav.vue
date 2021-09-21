@@ -12,7 +12,7 @@
           <router-link class="link black" to="/products">Products</router-link>
         </a>
         <a class="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pv3 ph2 ph4-l" v-if="$auth.isAuthenticated">
-          <router-link class="link black relative" to="/cart">Cart <span class="bg-light-purple white br-100 absolute cart-position">{{cartNumber}}</span> </router-link>
+          <router-link class="link black relative" to="/cart">Cart <span class="bg-light-purple white br-100 absolute cart-position tc">{{cartNumber}}</span> </router-link>
         </a>
         <a class="f6 f5-l link bg-animate black-80 hover-bg-light-pink dib pv3 ph2 ph4-l pointer" v-if="!$auth.isAuthenticated && !$auth.loading">
           <span id="qsLoginBtn" @click.prevent="login"><i class="fas fa-sign-in-alt mr2"></i>Login</span>

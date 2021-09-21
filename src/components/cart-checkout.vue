@@ -30,15 +30,23 @@
       </tbody>
     </table>
   </div>
-    <div class="tl">
-        <p class="t f4"><span class="green fw6">Total:</span> {{total}}</p>
-     <!-- <router-link to="/construction" class="btn btn-primary rounded">Proceed To Checkout</router-link> -->
-    <button class="bg-washed-red bn br2 pv2 ph3 w-100 w5-ns red di-ns db mr3 link mv3 mv0-ns" @click="removeCartProducts()">
-      <i class="fas fa-trash" ></i> Empty Cart
-    </button>
+    <div v-if="!products.length">
+        <p class="bg-washed-red pv3 ph2 br2">No item in your cart!</p>
+    </div>
+    <div class="tl mw8 center w-100">
+        <div v-if="products.length>0" class="">
+            <p class=" f4"><span class="green fw6">Total:</span> {{total}}</p>
 
-         <router-link to="/products" class="link bg-green  pv2 ph3 bn br2 white tc db di-ns"><i class="fas fa-space-shuttle mr2"></i>Continue Shopping</router-link>
+        <paystack class="bg-light-yellow gray pv2 ph3 bn br2 mr2 di-ns db w-100 w4-ns mb3" :amount="total*100" :full_name="$auth.user.name" :email="$auth.user.email" :paystackkey="PUBLIC_KEY" :reference="reference" :callback="processPayment" :close="close">
+            <i class="fas fa-money-bill-wave mr2"></i>Pay
+        </paystack>
+        <button class="bg-washed-red bn br2 pv2 ph3 w-100 w5-ns red di-ns db mr3 link" @click="removeCartProducts()">
+            <i class="fas fa-trash" ></i> Empty Cart
+        </button>
+        
+        </div>
 
+        <router-link to="/products" class="link bg-green mt3 pv2 ph3 bn br2 white tc db dib-ns"><i class="fas fa-space-shuttle mr2"></i>Continue Shopping</router-link>
     </div>
 
 </div>
@@ -48,44 +56,56 @@
 </template>
 
 <script>
-
+import paystack from 'vue-paystack';
 export default {
-  name: 'checkout',
-
-  computed: {
-
-    products () {
-      return this.$store.getters.cartProducts
+    name: 'checkout',
+    data: () => {
+        return {
+            amount: null,
+            email: null,
+            full_name: null,
+            PUBLIC_KEY: 'pk_test_b75e40ec3847c3f94d28edbd98492c1687960563'
+        };
     },
-
-    total () {
-      return this.$store.getters.cartTotal
+    components: {
+        paystack
     },
-
-    cartNumber(){
-      return this.$store.getters.cartIteming
-    }
-
-  },
-
-  mounted() {
-    console.log(this.products)
-  },
-
-  methods: {
-
-    removeProduct(product){
-      this.$store.dispatch('removeProduct', product)
+    computed: {
+        reference() {
+            let text = "";
+            let possible =
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            for (let i = 0; i < 10; i++)
+            text += possible.charAt(Math.floor(Math.random() * possible.length));
+            return text;
+         },
+        products () {
+            return this.$store.getters.cartProducts
+        },
+        total () {
+            return this.$store.getters.cartTotal
+        },
+        cartNumber(){
+            return this.$store.getters.cartIteming
+        }
     },
-    
-    removeCartProducts(){
-      console.log('check')
-      this.$store.dispatch('removeCartProducts')
-
-      let ar = document.getElementById('alert');
-      ar.style.display = 'block';
-    },
-  }
+    methods: {
+        processPayment: () => {
+        window.alert("Payment recieved")
+        },
+        close: () => {
+            console.log("You closed checkout page")
+        },
+        removeProduct(product){
+            this.$store.dispatch('removeProduct', product)
+        },
+        removeCartProducts(){
+            console.log('check')
+            this.$store.dispatch('removeCartProducts')
+            let ar = document.getElementById('alert');
+            ar.style.display = 'block';
+        },
+    } 
 
 }
 </script>
