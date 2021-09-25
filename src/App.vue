@@ -2,21 +2,18 @@
   <div id="app">
     <navigation></navigation>
     <router-view />
-    <footing></footing>
 
   </div>
 </template>
 
  <script>
   import navigation from "@/components/nav.vue";
-  import footing from "@/components/footer.vue";
 
 
 export default {
   name: 'App',
   components: {
     navigation,
-    footing
   }
 }
 
@@ -41,17 +38,5 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
 

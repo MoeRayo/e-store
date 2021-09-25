@@ -6,9 +6,8 @@ import Cloudinary from "cloudinary-vue";
 import store from '@/store/index'
 import { domain, clientId } from "../auth_config.json";
 
-// Import the plugin here
+// Import auth0 plugin here
 import { Auth0Plugin } from "./auth";
-
 
 Vue.use(Cloudinary, {
   configuration: { 
@@ -27,7 +26,6 @@ Vue.use(Auth0Plugin, {
     );
   }
 });
-
 
 Vue.config.productionTip = false
 

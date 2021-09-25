@@ -1,8 +1,8 @@
 <template>
   <div>
     <header class="bg-white black-80 tc pt4 avenir">
-      <a href="">
-        <img src="https://res.cloudinary.com/moerayo/image/upload/v1632095970/e-store/logo_ja9ugi.png" alt="">
+      <a href="/">
+        <cld-image public-id="store/logo_ja9ugi"></cld-image>
       </a>
       <h1 class="mt2 mb0 baskerville i fw1 f1 mh2">Rayo E-Store</h1>
       <h2 class="mt2 mb0 f6 fw4 ttc tracked i">Your satisfaction is our utmost pleasure...</h2>
@@ -32,18 +32,19 @@ export default {
   name: 'navigation',
   computed: {
     cartNumber(){
-        return this.$store.getters.cartIteming
-      }
-  },
-    methods: {
-  login() {
-    this.$auth.loginWithRedirect();
-  },
-  logout() {
-    this.$auth.logout();
-    this.$router.push({ path: "/" });
-  }
+       return this.$store.getters.cartIteming
     }
+  },
+
+  methods: {
+    login() {
+      this.$auth.loginWithRedirect();
+    },
+    logout() {
+      this.$auth.logout();
+      this.$router.push({ path: "/" });
+    }
+  }
 }
 </script>
 <style>

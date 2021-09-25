@@ -10,9 +10,8 @@
 import logoutmessage from '@/components/logout-message';
 
 export default {
-    components: {
-        logoutmessage
-    }
-    
+  components: {
+    logoutmessage
+  }
 }
 </script>

@@ -1,8 +1,14 @@
 <template>
   <div>
     <div v-for="product in products" :key="product.id" class="dib">
-      <article class="br2 ba dark-gray b--black-10 mv4 w-100 w-90-m w-90-l mw5 center">
-        <cld-image :cloudName="(cloudName)" :publicId="product.public_id" width="400" height="250" crop="scale" />
+      <article class="br2 ba dark-gray b--black-10 mv3 w-100 w-90-m w-90-l mw5 center">
+        <cld-image :publicId="product.public_id" loadinng="lazy">
+          <cld-placeholder 
+            type="blur">
+          </cld-placeholder>
+          <cld-transformation height="250" width="250" crop="fill" />
+          <cld-transformation :overlay="{url: 'https://res.cloudinary.com/moerayo/image/upload/v1632557532/store/logo-bgnone_kdje7n.png'}" width="0.4" gravity="south_east"/>
+        </cld-image>
         <div class="pa2 ph3-ns pb3-ns bg-washed-red">
           <div class="dt w-100 mt1">
             <div class="">
@@ -21,37 +27,21 @@
   </div>
 </template>
 
-
-
-
-
 <script>
 export default {
-    name: 'product',
-    data() {
-    return {
-      cloudName: process.env.VUE_APP_CLOUDINARY_CLOUD_NAME
-      }
-    },
-    computed: {
-        products() {
-            return this.$store.getters.availableProducts
-        }
-    },
-    methods: {
+  name: 'product',
+  computed: {
+    products() {
+      return this.$store.getters.availableProducts
+    }
+  },
+  methods: {
     addProductToCart(product) {
       this.$store.dispatch('addProductToCart', product)
-      let productAlert = document.getElementById('alert')
-      // let al = document.getElementById('proa');
-      // al.style.display = 'block';
-      if (product.quantityInStock <= 2) {
-        productAlert.style.display = 'inline-block'
-        }
     }
   },
   mounted() {
-    this.loading = true
-    this.$store.dispatch('fetchProducts').then(() => (this.loading = false))
+    this.$store.dispatch('fetchProducts')
   }
 }
 </script>

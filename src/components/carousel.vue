@@ -2,11 +2,9 @@
   <div>
     <transition-group name="fade" tag="div">
       <div v-for="i in [currentIndex]" :key="i">
-        <img :src="currentImg" />
+        <cld-image :public-id="currentImg"></cld-image>
       </div>
     </transition-group>
-    <!-- <a class="prev" @click="prev" href="#">&#10094;</a>
-    <a class="next" @click="next" href="#">&#10095;</a> -->
   </div>
 </template>
 <script>
@@ -15,11 +13,11 @@ export default {
   data() {
     return {
       images: [
-       "https://res.cloudinary.com/moerayo/image/upload/v1632083318/e-store/carousel8_fstjay.jpg",
-        "https://res.cloudinary.com/moerayo/image/upload/v1632083321/e-store/carousel3_vke2hj.jpg",
-        "https://res.cloudinary.com/moerayo/image/upload/v1632083322/e-store/crousel4_cnv8uf.jpg",
-        "https://res.cloudinary.com/moerayo/image/upload/v1632083319/e-store/carousel5_oaiwht.jpg",
-        "https://res.cloudinary.com/moerayo/image/upload/v1632083322/e-store/carousel7_xjxy2y.jpg",
+       "store/carousel8_fstjay",
+       "store/carousel3_vke2hj",
+       "store/carousel5_oaiwht",
+       "store/carousel7_ocjkzc",
+       "store/crousel4_cnv8uf",
       ],
       timer: null,
       currentIndex: 0
@@ -34,7 +32,6 @@ export default {
     startSlide: function() {
       this.timer = setInterval(this.next, 4000);
     },
-
     next: function() {
       this.currentIndex += 1;
     },
@@ -71,33 +68,5 @@ export default {
 
 img {
   height:600px;
-  /* width:100% */
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.7s ease;
-  border-radius: 0 4px 4px 0;
-  text-decoration: none;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-}
-
-.prev {
-  left: 0;
-}
-
-.prev:hover, .next:hover {
-  background-color: white;
 }
 </style>

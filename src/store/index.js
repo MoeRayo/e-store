@@ -9,6 +9,7 @@ export default new Vuex.Store({
     products: [],
     cart: []
   },
+
   getters: {
     availableProducts (state) {
       return state.products
@@ -27,6 +28,7 @@ export default new Vuex.Store({
     }
     
   },
+
   actions: {
     fetchProducts ({commit}) {
       return new Promise((resolve) => {
@@ -57,6 +59,7 @@ export default new Vuex.Store({
       context.commit('removeAllProducts')
     }
   },
+
   mutations: {
     setProducts (state,products){
       state.products = products
@@ -69,10 +72,8 @@ export default new Vuex.Store({
         price: product.price,
         productprice: product.price,
         newQuantityInStock: product.quantityInStock
-        
       })
     },
-    
 
     popProductFromCart(state){
       state.cart.pop()
@@ -80,20 +81,17 @@ export default new Vuex.Store({
 
     removeAllProducts(state){
      state.cart = []
-     console.log('state.cart',state.cart)
-
     },
 
     incrementProductInventory (state, product) {
-       product.quantityInStock--
+      product.quantityInStock--
     },
 
     incrementItemQuantity (state, cartItem) {
       const product = state.products.find(product => product.id === cartItem.id)
       cartItem.quantity++
-       product.quantityInStock--
+      product.quantityInStock--
       cartItem.productprice = cartItem.quantity * product.price
     }
   }
-
 })
