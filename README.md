@@ -20,5 +20,13 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Other Notes
+The `.env` file was not pushed to github, so to successfully get the result we did in the final product, ensure you create your own `.env` file in the root folder of this project and add the following:
+```
+VUE_APP_CLOUDINARY_CLOUD_NAME = 'xxx`
+VUE_APP_PAYSTACK_KEY = 'xxx'
+```
+
+Ensure you also replace all ocurrences of "_xxx_" with the right things.
+
+Happy Coding.
