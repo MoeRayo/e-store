@@ -4,7 +4,6 @@ import 'tachyons/css/tachyons.css'
 import router from './router'
 import Cloudinary from "cloudinary-vue";
 import store from '@/store/index'
-// import authConfigTemplate from "../auth_config.json";
 
 // Import auth0 plugin here
 import { Auth0Plugin } from "./auth";
