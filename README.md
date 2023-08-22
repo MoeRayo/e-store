@@ -1,4 +1,4 @@
-# vue-hackmamba
+# E-store
 
 ## Project setup
 ```
@@ -21,10 +21,12 @@ npm run lint
 ```
 
 ### Other Notes
-The `.env` file was not pushed to github, so to successfully get the result we did in the final product, ensure you create your own `.env` file in the root folder of this project and add the following:
+The `.env` file was not pushed to github, so to successfully get the result we did in the final product, ensure you create your own `.env` file in the root folder of this project and add the corresponding data to the mising fields:
 ```
-VUE_APP_CLOUDINARY_CLOUD_NAME = 'xxx`
-VUE_APP_PAYSTACK_KEY = 'xxx'
+VUE_APP_CLOUDINARY_CLOUD_NAME=______
+VUE_APP_PAYSTACK_KEY=______
+VUE_APP_AUTH0_DOMAIN=______
+VUE_APP_AUTH0_CLIENTID=______
 ```
 
 Ensure you also replace all ocurrences of "_xxx_" with the right things.
