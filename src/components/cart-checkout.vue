@@ -79,7 +79,7 @@ export default {
       amount: null,
       email: null,
       full_name: null,
-      PUBLIC_KEY: 'pk_test_b75e40ec3847c3f94d28edbd98492c1687960563'
+      PUBLIC_KEY: process.env.VUE_APP_PAYSTACK_KEY
     };
   },
   components: {

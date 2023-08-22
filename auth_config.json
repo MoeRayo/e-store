@@ -1,5 +1,4 @@
 {
-    "domain": "dev-hv6quemb.us.auth0.com",
-    "clientId": "xB1P3a3qHycquW9sUiPeuCj0qWnkqp0H"
-  }
-  
+  "clientId": "__AUTH0_CLIENT_ID__",
+  "domain": "__AUTH0_DOMAIN__"
+}
